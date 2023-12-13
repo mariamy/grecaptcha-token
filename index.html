@@ -29,7 +29,7 @@
                     <div class="col-4">
                         <button
                             class="btn btn-primary"
-                            @click="renderRecaptchaScript"
+                            @click="renderRecaptchaScript(generateToken)"
                         >
                             Render
                         </button>
@@ -39,7 +39,10 @@
 
             <div v-else class="mt-5">
                 <div class="mb-3">
-                    <span>Site key {{ siteKey }}</span>
+                    <span>
+                        Site key: 
+                        <b>{{ siteKey }}</b>
+                    </span>
                     <button
                         @click="recaptchaRendered = false"
                         class="btn btn-secondary ml-2"
